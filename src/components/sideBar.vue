@@ -1,5 +1,5 @@
 <template>
- <div class=" w-52 bg-secondary h-[100vh]">
+ <div class="hidden md:block md:w-52 md:bg-secondary md:h-[100vh]">
 
   <div class=" pt-8">
     <Dropdown title="Items Category" :items="Category" class="pl-8 h-[30px] gap-2 bg-primary-color text-white"/>
@@ -37,23 +37,18 @@
     </div>
       
         <div class="pl-8 mt-2 flex items-center gap-3">
-          <input type="checkbox" id="home-appliances" name="home-appliances" value="home-appliances">
-          <label for="home-appliances" class="text-[14px]"> HOME APPLIANCES </label>
+          <input type="radio" id="home-appliances" name="home-appliances" value="home-appliances">
+          <label for="home-appliances" class="text-[14px]"> ALL USERS </label>
         </div>
 
         <div class="pl-8 mt-4 flex items-center gap-3">
-          <input type="checkbox" id="office-appliances" name="office-appliances" value="office-appliances">
-          <label for="office-appliances" class="text-[14px]"> OFFICE APPLIANCES </label>
+          <input type="radio" id="office-appliances" name="office-appliances" value="office-appliances">
+          <label for="office-appliances" class="text-[14px]"> USER REQUEST </label>
         </div>
 
         <div class="pl-8 mt-4 flex items-center gap-3">
-          <input type="checkbox" id="plumbing-tools" name="plumbing-tools" value="plumbing-tools">
-          <label for="plumbing-tools" class="text-[14px]"> PLUMBING TOOLS </label>
-        </div>
-
-        <div class="pl-8 mt-4 flex items-center gap-3">
-          <input type="checkbox" id="consumables" name="consumables" value="consumables">
-          <label for="consumables" class="text-[14px]"> CONSUMABLES </label>
+          <input type="radio" id="plumbing-tools" name="plumbing-tools" value="plumbing-tools">
+          <label for="plumbing-tools" class="text-[14px]"> CREATE ADMIN </label>
         </div>
     </div>
       
