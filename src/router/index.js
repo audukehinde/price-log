@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import MainView from '../views/MainView.vue'
 import ItemsDetail from '../views/ItemsDetail.vue'
-import UsersRequest from '../views/UsersRequest.vue'
+import UsersRequest from '../components/UsersRequest.vue'
 
 const routes = [
   // {
