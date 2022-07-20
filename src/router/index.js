@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import MainView from '../views/MainView.vue'
-import ItemsDetail from '../views/ItemsDetail.vue'
+import UploadItem from '../views/UploadItem.vue'
 import UsersRequest from '../views/UsersRequest.vue'
 import Item from '../components/Item.vue'
 import Users from '../components/Users.vue'
@@ -27,10 +27,11 @@ const routes = [
       {path: "/users", component: Users},
     ]
   },
+ 
   {
-    path: '/ItemsDetail',
-    name: 'ItemsDetail',
-    component: ItemsDetail
+    path: '/uploadItem',
+    // name: 'UploadItem.vue',
+    component: UploadItem
   },
  
   {

@@ -9,7 +9,9 @@
       </span>
       <input type="text" placeholder="Search" class="w-32 md:absolute pl-6 py-1 rounded-[5px] shadow-md border-t-1 md:w-96">
     </div>
-    <button class="bg-primary-color py-2 px-3 text-white rounded-lg font-bold">Upload</button>
+    <router-link to="/uploadItem" class="bg-primary-color py-2 px-3 text-white rounded-lg font-bold">
+      Upload
+    </router-link>
     </div>
   </div>
 
@@ -44,6 +46,7 @@
         <p class="mt-4 pl-4">Plier</p>
         <p class="my-2 pl-4">$200</p>
       </div>
+      <router-view/>
     </div>
 </template>
 
