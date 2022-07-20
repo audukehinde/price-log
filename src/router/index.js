@@ -5,6 +5,7 @@ import UploadItem from '../views/UploadItem.vue'
 import UsersRequest from '../components/UsersRequest.vue'
 import Item from '../components/Item.vue'
 import Users from '../components/Users.vue'
+import Description from '../views/Description.vue'
 
 const routes = [
   {
@@ -34,7 +35,14 @@ const routes = [
     // name: 'UploadItem.vue',
     component: UploadItem,
   },
-];
+  {
+    path: '/description',
+    // name: 'Des',
+    component: Description
+  },
+ 
+
+]
 
 const router = createRouter({
   history: createWebHashHistory(),

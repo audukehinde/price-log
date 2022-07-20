@@ -7,8 +7,8 @@
     />
   </div>
   <div class="flex">
-    <div><sideBar /></div>  
-    <div class=" ml-6"><router-view /></div>
+    <sideBar />
+    <div class="flex-1 p-5"><router-view /></div>
     <!-- <div class="ml-6"><item/></div> -->
     <!-- <div><Users /></div> -->
     

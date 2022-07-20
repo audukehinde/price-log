@@ -1,11 +1,13 @@
 <template>
-  <div class="hidden md:block md:w-52 md:bg-secondary md:h-[100vh]">
+  <div class="hidden md:block  md:w-56 md:bg-secondary md:h-[100vh]">
     <div class="pt-8">
+      <router-link to="/item">
       <Dropdown
         title="Items Category"
         :items="Category"
         class="pl-8 h-[30px] gap-2 bg-primary-color text-white"
       />
+      </router-link>
     </div>
     <div class="pt-6">
       <div class="bg-sidebar-secondary h-[30px] flex items-center">
