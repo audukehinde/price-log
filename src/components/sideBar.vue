@@ -82,9 +82,11 @@
           name="office-appliances"
           value="office-appliances"
         />
-        <label for="office-appliances" class="text-[14px]">
-          USER REQUEST
-        </label>
+        <router-link to="/usersRequest">
+          <label for="office-appliances" class="text-[14px]">
+            USER REQUEST
+          </label>
+        </router-link>
       </div>
 
       <div class="pl-8 mt-4 flex items-center gap-3">

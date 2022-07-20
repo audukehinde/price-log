@@ -72,10 +72,6 @@
                     <div class="flex flex-col justify-center items-center pt-5 pb-6">
                         <img src="../img/img-logo.png" alt="">
                         <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Drag and drop image, or </span><span class="text-btn-yellow font-bold">Browse</span></p>
-<<<<<<< HEAD:src/views/ItemsDetail.vue
-                        <p class="text-xs text-gray-500 dark:text-gray-400"></p>
-=======
->>>>>>> 35fc01d6bb0d18144b4386a979bc44e05369d8ae:src/views/UploadItem.vue
                     </div>
                     <!-- <input id="dropzone-file" type="file" class="bg-transparent border-none text-center p-10" />  -->
                 </label>
