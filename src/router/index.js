@@ -5,6 +5,7 @@ import UploadItem from '../views/UploadItem.vue'
 import UsersRequest from '../views/UsersRequest.vue'
 import Item from '../components/Item.vue'
 import Users from '../components/Users.vue'
+import Description from '../views/Description.vue'
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: '/UsersRequest',
     name: 'UsersRequest',
     component: UsersRequest
+  },
+  {
+    path: '/description',
+    // name: 'Des',
+    component: Description
   },
  
 
