@@ -1,6 +1,7 @@
 <template>
   <div class="menu-item flex items-center" @click="isOpen = !isOpen" :class="`${isOpen ? 'isExpanded' : '' }`">
-    <a href="#">{{ title }}</a>
+    <!-- <a href="#">{{ title }}</a> -->
+    <p class="cursor-pointer">{{ title }}</p>
     <svg viewBox="0 0 1030 638" width="10px" class=" cursor-pointer">
       <path d="M1017 68L541 626q-11 12-26 12t-26-12L13 68Q-3 49 6 24.5T39 0h952q24 0 33 24.5t-7 43.5z" fill="#FFF"></path>
     </svg>
@@ -28,14 +29,7 @@ export default {
 
 <style>
   .menu-item {
-    /* position: relative; */
     background: #fff;
-    /* margin-bottom: 20px; */
-    /* top: calc(100% + 18px); 
-    left: 50%; */
-    /* transform: translateX(-50%); */
-    /* width: 50%; */
-    /* border-radius: 0 0 16px 16px; */
     padding: 5px 10px;
   }
 
