@@ -7,7 +7,7 @@
     />
   </div>
   <div class="flex">
-    <div><sideBar /></div>
+    <div><sideBar /></div>  
     <div class=" ml-6"><router-view /></div>
     <!-- <div class="ml-6"><item/></div> -->
     <!-- <div><Users /></div> -->
