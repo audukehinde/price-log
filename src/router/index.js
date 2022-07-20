@@ -5,15 +5,19 @@ import Item from '../components/Item.vue'
 import Users from '../components/Users.vue'
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Login',
-  //   component: LoginView
-  // },
-
   {
     path: '/',
-    name: 'Main',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
+  },
+
+  {
+    path: '/main',
+    name: 'main',
     redirect: '/item',
     component: MainView,
     children: [
