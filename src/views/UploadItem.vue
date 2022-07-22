@@ -71,7 +71,7 @@
                 <label for="dropzone-file" class="flex flex-col justify-center items-center h-[60vh] w-[30vw] bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                     <div class="flex flex-col justify-center items-center pt-5 pb-6">
                         <img src="../img/img-logo.png" alt="">
-                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Drag and drop image, or </span><span class="text-btn-yellow font-bold">Browse</span></p>
+                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Drag and drop image, or </span><span class="text-orange font-bold">Browse</span></p>
                     </div>
                     <!-- <input id="dropzone-file" type="file" class="bg-transparent border-none text-center p-10" />  -->
                 </label>
