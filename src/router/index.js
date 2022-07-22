@@ -6,6 +6,9 @@ import UsersRequest from '../views/UsersRequest.vue'
 import Item from '../components/Item.vue'
 import Users from '../components/Users.vue'
 import Description from '../views/Description.vue'
+import ForgetPassword from '../views/ForgetPassword'
+import ResetPassword from '../views/ResetPassword'
+// import sideBar from '../components/sideBar'
 
 const routes = [
   {
@@ -31,7 +34,6 @@ const routes = [
  
   {
     path: '/uploadItem',
-    // name: 'UploadItem.vue',
     component: UploadItem
   },
  
@@ -42,12 +44,19 @@ const routes = [
   },
   {
     path: '/description',
-    // name: 'Des',
     component: Description
   },
- 
-
+  {
+    path: '/forgetpassword',
+    component: ForgetPassword
+  },
+  {
+    path: '/resetpassword',
+    component: ResetPassword
+  },
 ]
+
+
 
 const router = createRouter({
   history: createWebHashHistory(),

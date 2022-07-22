@@ -1,5 +1,5 @@
 <template>
- <div class="hidden overflow-x-auto relative w-[80vw] md:flex justify-center">
+ <div class="w-[90vw] overflow-x-auto relative md:w-[80vw] md:flex justify-center">
     <table class="w-[90%] text-left">
       <thead class="border-b border-tertiary text-left">
         <tr >

@@ -2,7 +2,7 @@
     <div class="flex flex-col-reverse lg:flex-row lg:w-screen lg:h-screen">
         <button type="submit" class="flex justify-center items-center bottom-0 lg:hidden lg:rounded-lg rounded text-sm font-semibold text-white w-32 h-8 bg-primary-color">Done</button>
         <div class="bg-sidebar h-[100vh] lg:w-1/2">        
-             <img src="../img/PriceLog.png" alt="" class="mt-4 mb-8 ml-5 w-32">
+             <img src="../img/PriceLog.png" alt="" class="mt-4 mb-8 ml-20 w-32">
              <div class="flex flex-col lg:hidden">
                 <div class="flex justify-center">
                     <label for="dropzone-file" class="flex flex-col justify-center items-center w-32 h-32 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -14,18 +14,18 @@
                     </label>
                 </div>
             </div>
-            <div class="ml-6">
+            <div class="flex flex-col items-center justify-center">
              <div class="flex flex-col m-2">
                 <label>Title</label>
-                <input type="text" class="lg:w-[400px] lg:h-[35px] h-8 px-3 rounded lg:rounded-lg border-2 border-primary-color bg-transparent" />
+                <input type="text" class=" md:w-[100%] lg:w-[400px] lg:h-[35px] h-8 px-3 rounded lg:rounded-lg border-1 border-primary-color focus:outline-none" />
              </div>
              <div class="flex flex-col m-2">
                 <label>Price</label>
-                <input type="text" class="lg:w-[400px] lg:h-[35px] h-8 px-3 rounded lg:rounded-lg border-2 border-primary-color bg-transparent" />
+                <input type="text" class="lg:w-[400px] lg:h-[35px] h-8 px-3 rounded lg:rounded-lg border-1 border-primary-color focus:outline-none" />
              </div>
              <div class="flex flex-col m-2">
                 <label>Category</label>
-                <select id="quantity_disabled" class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded lg:rounded-lg border-2 border-primary-color bg-transparent">
+                <select id="quantity_disabled" class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded lg:rounded-lg border-primary-color focus:outline-none">
                     <option selected></option>
                     <option value="consumables">Consumables</option>
                     <option value="electronics">Electronics</option>
@@ -37,15 +37,15 @@
              </div>
              <div class="flex flex-col m-2 bg-transparent">
                 <label>Description</label>
-                <input type="message" class="lg:w-[400px] lg:h-24 px-3 h-16 rounded lg:rounded-lg border-2 border-primary-color bg-transparent" />
+                <input type="message" class="lg:w-[400px] lg:h-24 px-2 h-16 rounded lg:rounded-lg border-1 border-primary-color focus:outline-none" />
              </div>
              <div class="flex flex-col m-2">
                 <label>Vendor Details</label>
-                <input type="text" class="lg:w-[400px] lg:h-[35px] px-3 h-8 rounded lg:rounded-lg border-2 border-primary-color bg-transparent" />
+                <input type="text" class="lg:w-[400px] lg:h-[35px] px-3 h-8 rounded lg:rounded-lg border-1 border-primary-color focus:outline-none" />
              </div>
              <div class="flex flex-col m-2">
                 <label class="bg-transparent">Quantity</label>
-                <select id="quantity_disabled" class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded lg:rounded-lg border-2 border-primary-color bg-transparent">
+                <select id="quantity_disabled" class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded lg:rounded-lg border-primary-color focus:outline-none">
                     <option selected></option>
                     <option value="one">1</option>
                     <option value="two">2</option>
@@ -62,7 +62,7 @@
             
              <div class="flex flex-col m-2">
                 <label>Promo/Discount Price</label>
-                <input type="text" class="lg:w-[400px] lg:h-[35px] px-3 lg:rounded-lg h-8 rounded border-2 border-primary-color bg-transparent" />
+                <input type="text" class="lg:w-[400px] lg:h-[35px] px-3 lg:rounded-lg h-8 rounded border-1 border-primary-color focus:outline-none" />
              </div>
              </div>
         </div>
@@ -80,3 +80,8 @@
          </div>
     </div>
 </template>
+<style>
+    select {
+        border: 1px solid red;
+    }
+</style>

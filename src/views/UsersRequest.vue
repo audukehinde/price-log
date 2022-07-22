@@ -1,13 +1,16 @@
 <template>
+    <div class="flex gap-4">
         <sideBar />
-    <div>
-        <h1 class="w-96 h-96 bg-red-900 text-white  text-4xl font-bold">Hello, world!!!</h1>
+        <div>
+            <h1 class=" text-black  text-4xl font-bold">Hello, world!!!</h1>
+        </div>
     </div>
+       
     
 </template>
 
 <script>
-import { sideBar } from '../components/sideBar.vue'
+import sideBar  from '../components/sideBar.vue'
 
 export default {
     components: { sideBar },

@@ -13,6 +13,13 @@ module.exports = {
         "sidebar-secondary": "rgba(244, 248, 248, 0.3)",
         "sidebar-tags": "rgba(0, 0, 0, 0.7)",
       },
+      fontFamily: {
+        'sans': ['ui-sans-serif', 'system-ui'],
+        'serif': ['ui-serif', 'Georgia'],
+        'mono': ['ui-monospace', 'SFMono-Regular'],
+        'display': ['Oswald'],
+        'body': ['"Open Sans"'],
+      }
     },
   },
   plugins: [],
