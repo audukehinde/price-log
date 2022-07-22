@@ -69,11 +69,11 @@
         <div class="pl-8 mt-2 flex items-center gap-3">
           <input
             type="radio"
-            id="home-appliances"
-            name="home-appliances"
-            value="home-appliances"
+            id="all-users"
+            name="all-users"
+            value="all-users"
           />
-          <label for="home-appliances" class="text-[14px]"> ALL USERS </label>
+          <label for="all-users" class="text-[14px]"> ALL USERS </label>
         </div>
       </router-link>
 
@@ -81,11 +81,11 @@
       <div class="pl-8 mt-4 flex items-center gap-3">
         <input
           type="radio"
-          id="office-appliances"
-          name="office-appliances"
-          value="office-appliances"
+          id="request"
+          name="request"
+          value="request"
         />
-        <label for="office-appliances" class="text-[14px]">
+        <label for="request" class="text-[14px]">
           USER REQUEST
         </label>
       </div>
@@ -94,11 +94,11 @@
       <div class="pl-8 mt-4 flex items-center gap-3">
         <input
           type="radio"
-          id="plumbing-tools"
-          name="plumbing-tools"
-          value="plumbing-tools"
+          id="create-admin"
+          name="create-admin"
+          value="create-admin"
         />
-        <label for="plumbing-tools" class="text-[14px]"> CREATE ADMIN </label>
+        <label for="create-admin" class="text-[14px]"> CREATE ADMIN </label>
       </div>
       <!-- </form> -->
     </div>
