@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         "btn-yellow": "#F79A33",
+        "orange":"#F86D62",
         "secondary": "rgba(1, 106, 154, 0.5)",
         "primary-color": "#016A9A",
         "sidebar": "rgba(1, 106, 154, 0.18)",

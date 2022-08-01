@@ -9,7 +9,7 @@
       />
       </router-link>
     </div>
-    <div class="pt-6">
+    <!-- <div class="pt-6">
       <div class="bg-sidebar-secondary h-[30px] flex items-center">
         <h2 class="text-[13px] font-[600] text-sidebar-tags pl-8">TAGS</h2>
       </div>
@@ -57,49 +57,63 @@
         />
         <label for="consumables" class="text-[14px]"> CONSUMABLES </label>
       </div>
-    </div>
+    </div> -->
 
-    <div class="pt-6">
+    <div class="pt-12">
       <div class="bg-sidebar-secondary h-[30px] flex items-center">
         <h2 class="text-[13px] font-[600] text-sidebar-tags pl-8">USERS</h2>
       </div>
 
       <!-- <form action=""> -->
       <router-link to="/users">
-        <div class="pl-8 mt-2 flex items-center gap-3">
+        <div class="pl-8 mt-10 flex items-center gap-3">
           <input
             type="radio"
             id="all-users"
             name="all-users"
             value="all-users"
           />
-          <label for="all-users" class="text-[14px]"> ALL USERS </label>
+          <label for="all-users" class="text-[14px] cursor-pointer"> ALL USERS </label>
         </div>
       </router-link>
 
       <router-link to="UsersRequest">
-      <div class="pl-8 mt-4 flex items-center gap-3">
+      <div class="pl-8 mt-10 flex items-center gap-3 cursor-pointer">
         <input
           type="radio"
           id="request"
           name="request"
           value="request"
         />
-        <label for="request" class="text-[14px]">
+        <label for="request" class="text-[14px] cursor-pointer">
           USER REQUEST
         </label>
       </div>
       </router-link>
 
-      <div class="pl-8 mt-4 flex items-center gap-3">
+      <router-link to="/createAdmin">
+      <div class="pl-8 mt-10 flex items-center gap-3 cursor-pointer">
         <input
           type="radio"
           id="create-admin"
           name="create-admin"
           value="create-admin"
         />
-        <label for="create-admin" class="text-[14px]"> CREATE ADMIN </label>
+        <label for="create-admin" class="text-[14px] cursor-pointer"> Price Request </label>
       </div>
+      </router-link>
+
+      <router-link to="/AddCategory">
+      <div class="pl-8 mt-10 flex items-center gap-3">
+        <input
+          type="radio"
+          id="create-admin"
+          name="create-admin"
+          value="create-admin"
+        />
+        <label for="create-admin" class="text-[14px] cursor-pointer"> Add Category </label>
+      </div>
+      </router-link>
       <!-- </form> -->
     </div>
 
@@ -197,9 +211,11 @@
           name="office-appliances"
           value="office-appliances"
         />
-        <label for="office-appliances" class="text-[14px]">
-          USER REQUEST
-        </label>
+        <router-link to="/usersRequest">
+          <label for="office-appliances" class="text-[14px]">
+            USER REQUEST
+          </label>
+        </router-link>
       </div>
 
       <div class="pl-8 mt-4 flex items-center gap-3">

@@ -8,14 +8,57 @@
     />
   </div>
 
+   <div class="flex mytable justify-center items-center  bg-[#D9E9F0] mx-28 flex-col rounded-[21px] transform hover:bg-gray-300 hover:text-white transition duration-500 hover:scale-110 mt-10">
+      <div class="flex justify-between items-center w-[85vw] px-20 py-2 my-2">
+        <p class="font-bold text-sm text-gray-700">Price History</p>
+         <button type="submit" class="rounded-[3px] text-sm font-bold text-white bg-primary-color px-3 p-2 justify-end" @click="toggleModal">+ Add Price</button>
+      </div>
+       <table class="w-[100%] text-gray-700 text-md h-auto mb-4">
+          <thead>
+            <tr>
+              <th class="py-1">Price</th>
+              <th class="py-1">Date</th>
+              <th class="py-1">Vendor Name</th>
+              <th class="py-1">Vendor Address</th>
+              <th class="py-1">Phone Number</th>
+              <th class="py-1">Discount</th>
+            </tr>
+          </thead>
+          
+          <tr class="text-center">
+            <td class="py-1">#10,000</td>
+            <td class="py-1">Sep. 22, 2024</td>
+            <td class="py-1">Suliya Ajara</td>
+            <td class="py-1">Brick and Motal</td>
+            <td class="py-1">09067895432</td>
+            <td class="py-1">None</td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="py-1">#12,000</td>
+            <td class="py-1">Sep. 22, 2024</td>
+            <td class="py-1">Saburi Ologbojo</td>
+            <td class="py-1">Online</td>
+            <td class="py-1">09067895432</td>
+            <td class="py-1">None</td>
+          </tr>
+         
+        </table>
+
+        <div class="flex justify-start">
+                <button class="bg-primary-color text-white text-sm font-bold w-28 my-2 py-2 drop-shadow-lg rounded-lg hover:bg-transparent hover:text-black accept">See More...</button>
+        </div>
+          
+    </div>
+
     <div class="flex justify-center myfont">
       <div class="flex justify-center w-[85vw] p-7">
       <div class="w-[50%]">
-        <p class=" font-bold text-gray-600 mb-2">Steam Iron</p>
-        <p class="text-sm text-gray-700">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta provident distinctio dignissimos. Quisquam dolor dicta numquam, recusandae neque ratione ipsam, ullam veritatis libero sapiente corporis eos esse laboriosam. Dolorem, odio.</p>
-        <p class="mt-4 text-gray-700 text-[15px]"><span class="font-bold">Brand Type: </span>Perfectcare Compact</p>
+        <p class=" font-bold text-gray-600 mb-2">{{ item.name }}</p>
+        <p class="text-sm text-gray-700">{{ item.description }}</p>
+        <p class="mt-4 text-gray-700 text-[15px]"><span class="font-bold">Brand Type: </span>{{ item.categoryName }}</p>
         <p class=" border-t-[1px] border-b-[1px] py-3 my-4 font-bold text-gray-700 text-[15px]">#10,000</p>
-        <p class="text-gray-700 text-sm mb-4"><span class="font-bold">Vendor Details: </span>Aminat Ologogoro</p>
+        <p class="text-gray-700 text-sm mb-4"><span class="font-bold">Vendor Details: </span>{{ item.vendorName }}</p>
         <div class="text-gray-700 text-sm">
           <p class="font-bold mb-2">Product Features:</p>
           <ul>
@@ -31,59 +74,7 @@
       </div>
     </div>
 
-    <div class="flex mytable justify-center items-center  bg-[#D9E9F0] mx-28 mb-10 flex-col rounded-[21px] transform hover:bg-gray-300 hover:text-white transition duration-500 hover:scale-110">
-      <div class="flex justify-between items-center w-[85vw] px-20 py-2 my-2">
-        <p class="font-bold text-sm text-gray-700">Price History</p>
-         <button type="submit" class="rounded-[3px] text-sm font-bold text-white bg-primary-color px-3 p-2 justify-end" @click="toggleModal">+ Add</button>
-      </div>
-       <table class="w-[100%] justify-start text-gray-700 text-sm h-auto mb-4">
-          <thead>
-            <tr>
-              <th class="py-1">Price</th>
-              <th class="py-1">Quantity</th>
-              <th class="py-1">Date</th>
-              <th class="py-1">Vendor</th>
-              <th class="py-1">Discount</th>
-            </tr>
-          </thead>
-          
-          <tr class="text-center">
-            <td class="py-1">#10,000</td>
-            <td class="py-1">2</td>
-            <td class="py-1">Sep. 22, 2024</td>
-            <td class="py-1">Online</td>
-            <td class="py-1">None</td>
-          </tr>
-           <tr class="text-center">
-            <td class="py-2">#5,000</td>
-            <td class="py-2">3</td>
-            <td class="py-2">Jan. 22, 2030</td>
-            <td class="py-2">Online</td>
-            <td class="py-2">None</td>
-          </tr>
-          <tr class="text-center">
-            <td class="py-2">#9,000</td>
-            <td class="py-2">5</td>
-            <td class="py-2">Feb. 2, 2030</td>
-            <td class="py-2">Local</td>
-            <td class="py-2">None</td>
-          </tr>
-          <tr class="text-center">
-            <td class="py-2">#20,000</td>
-            <td class="py-2">9</td>
-            <td class="py-2">Dec. 9, 2023</td>
-            <td class="py-2">Local</td>
-            <td class="py-2">None</td>
-          </tr>
-          <tr class="text-center">
-            <td class="py-2">#50,000</td>
-            <td class="py-2">34</td>
-            <td class="py-2">Mar. 22, 2030</td>
-            <td class="py-2">Local</td>
-            <td class="py-2">None</td>
-          </tr>
-        </table>
-    </div>
+   
    <div v-if="showAddprice">
    <AddPrice> 
     <div @click="toggleModal" class=" cursor-pointer flex justify-end pt-1">
@@ -94,11 +85,6 @@
           <label class="text-left text-sm text-gray-700">Price</label>
           <input type="text"
             class="p-2 text-black rounded-[5px] md:w-[100%] md:text-sm md:mb-2 focus:outline-none ">
-        </div>
-         <div class="mx-3">
-          <label class="text-left text-sm text-gray-700">Quantity</label>
-          <input type="Number"
-            class="p-2 text-black rounded-[5px] md:w-[100%] md:text-sm md:mb-2 focus:outline-none">
         </div>
          <div class="mx-3">
           <label class="text-left text-sm text-gray-700">Vendor Name</label>
@@ -115,20 +101,29 @@
           <input type="text"
           class="p-2 text-black rounded-[5px] md:w-[100%] md:text-sm md:mb-2 focus:outline-none">
         </div>
+        <div class="mx-3">
+          <label class="text-left text-sm text-gray-700">Phone Number</label>
+          <input type="number"
+            class="p-2 text-black rounded-[5px] md:w-[100%] md:text-sm md:mb-2 focus:outline-none">
+        </div>
         <div class="mx-3 my-4">
           <button class="bg-[#016A9A] w-5/6 py-4 rounded-[10px] md:p-2 md:w-[100%] md:text-sm text-white font-bold">
-            Update
+            + Add Price
             </button>
         </div>
    
     </form>
    </AddPrice>
+      
  </div>
   </div>
 </template>
 
 <script>
 import AddPrice from '../components/AddPrice.vue'
+import { ref } from "@vue/reactivity";
+import { useRoute } from "vue-router";
+import axios from "axios";
 export default {
   components: {AddPrice},
   data() {
@@ -141,6 +136,24 @@ export default {
     toggleModal() {
       this.showAddprice = !this.showAddprice
     }
+  },
+  setup() {
+    const item = ref({});
+
+      const route = useRoute();
+      
+      const getItem = async () => {
+        const res = await axios.get(`items/${route.params.itemId}`);
+        item.value = res.data;
+        console.log(res);
+        // getExperience(res.data)
+        // getAvailability(res.data)
+      };
+    
+    return {item, getItem}
+  },
+  created(){
+    this.getItem()
   }
 }
 </script>

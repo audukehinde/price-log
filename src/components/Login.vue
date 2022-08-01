@@ -1,14 +1,14 @@
 <template>
   <div>
-    <form action="">
+    <form action="" @submit="handleSubmit">
     <input
       type="text"
-      placeholder="Email"
+      placeholder="Email" v-model="email"
       class="text-black rounded-[10px] p-2 md:w-[70%] md:text-sm md:mb-2 focus:outline-none"
     />
     <input
       type="password"
-      placeholder="Password"
+      placeholder="Password" v-model="password"
       class=" text-black mt-12 md:mt-6 rounded-[10px] p-2 md:w-[70%] md:text-sm md:mb-2  focus:outline-none"
     />
 
@@ -29,12 +29,36 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "Login",
   props: {
     msg: String,
   
   },
+
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+
+   methods: {
+    async handleSubmit() {
+      const response = await axios.post('users/login', {
+        email: this.email,
+        password: this.password
+      });
+      this.$router.push("/main");
+     
+      console.log(response);
+
+      localStorage.setItem('token', response.data.data.token);
+      
+    }
+  }
 };
 </script>
 
