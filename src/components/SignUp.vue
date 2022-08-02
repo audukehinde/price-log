@@ -23,9 +23,9 @@
       <div class="flex justify-center">
         <p
           class="text-sm font-bold bg-white text-red-600 md:w-[70%] text-center"
-          v-if="error"
+          v-if="errors"
         >
-          {{ error }}
+          {{ errors }}
         </p>
       </div>
 
@@ -58,7 +58,7 @@ export default {
       name: "",
       email: "",
       password: "",
-      error: "",
+      errors: "",
     };
   },
   methods: {
@@ -77,10 +77,15 @@ export default {
         }, 2000);
 
       } catch (error) {
-        this.error =
+        this.errors =
           error.response && error.response.data.error
             ? error.response.data.error
             : error.response.data;
+
+            setTimeout(() => {
+          console.log('Timer working');
+           this.errors = ''
+            }, 3000);
       }
     },
   },

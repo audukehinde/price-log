@@ -33,14 +33,16 @@
              </div>
              <div class="flex flex-col m-1">
                 <label>Category</label>
-                <select id="quantity_disabled" @change="onItemSelected($event)"  class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded-[5px] border-primary-color focus:outline-none">
-                    <option selected></option>
-                    <option value="consumables">Consumables</option>
-                    <option value="electronics">Electronics</option>
+                <select id="quantity_disabled" class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded-[5px] border-primary-color focus:outline-none" >
+                    <option selected>Select Category</option>
+                    <!-- <option value="consumables">{{ category.categoryName }}</option> -->
+                     <option v-for="category in getCategories" :key="category.categoryID">{{category.categoryName}}</option>
+                    <!-- <option value="tools">Tools</option> -->
+                    <!-- <option value="electronics">Electronics</option>
                     <option value="tools">Tools</option>
                     <option value="batteries">Batteries</option>
                     <option value="laptops">Laptops</option>
-                    <option value="clothes">Clothes</option>
+                    <option value="clothes">Clothes</option> -->
                 </select>
              </div>
              <div v-if="isCategorySelected">
@@ -50,9 +52,6 @@
                     <input type="text" class="lg:w-[400px] lg:h-[35px] px-3 rounded-[5px] h-8 border-1 border-primary-color focus:outline-none" />
                 </div>
              </div>
-
-         
-
              </div>
                     
             </div>
@@ -79,7 +78,7 @@ export default {
         return {
             isCategorySelected: false,
             propertiesCategories: [],
-            item: '',
+            category: '',
             // getCategories: []
         }
     },
@@ -105,10 +104,9 @@ export default {
     },
      async getCategories () {
         const res = await axios.get('categories');
-        this.item = res.data;
-        console.log(res);
+        this.category = res.data;
+        console.log(res.data);
     },
-   
     
   },
     created(){

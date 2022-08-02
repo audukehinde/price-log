@@ -12,6 +12,17 @@
       class=" text-black mt-12 md:mt-6 rounded-[10px] p-2 md:w-[70%] md:text-sm md:mb-2  focus:outline-none"
     />
 
+    <!-- {{errors}} -->
+
+     <div class="flex justify-center">
+        <p
+          class="text-[10px] font-semibold rounded-md bg-white text-red-600 md:w-[70%] text-center"
+          v-if="errors"
+        >
+          {{ errors }}
+        </p>
+      </div>
+
     <button
       class="mt-12 bg-btn-yellow rounded-[10px] w-[90%] md:w-[70%] text-[17px] h-[50px] md:h-[40px] md:font-bold md:mt-6"
     >
@@ -41,22 +52,33 @@ export default {
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
+       errors:"",
     }
+   
   },
 
    methods: {
     async handleSubmit() {
-      const response = await axios.post('users/login', {
+      try {
+           const response = await axios.post('users/login', {
         email: this.email,
         password: this.password
       });
       this.$router.push("/main");
-     
-      console.log(response);
-
+      // console.log(response);
       localStorage.setItem('token', response.data.data.token);
-      
+        
+      } catch (error) {
+
+         this.errors = error.response && error.response.data.error
+                      ? error.response.data.error.message
+                      : error.response.data.message;
+        setTimeout(() => {
+          console.log('Timer working');
+           this.errors = ''
+            }, 3000);    
+      }
     }
   }
 };
