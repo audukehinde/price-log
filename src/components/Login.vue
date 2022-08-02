@@ -16,7 +16,7 @@
 
      <div class="flex justify-center">
         <p
-          class="text-[10px] font-semibold rounded-md bg-white text-red-600 md:w-[70%] text-center"
+          class="text-sm font-semibold rounded-md bg-white text-red-600 md:w-[70%] text-center p-3"
           v-if="errors"
         >
           {{ errors }}
@@ -75,7 +75,7 @@ export default {
                       ? error.response.data.error.message
                       : error.response.data.message;
         setTimeout(() => {
-          console.log('Timer working');
+          // console.log('Timer working');
            this.errors = ''
             }, 3000);    
       }

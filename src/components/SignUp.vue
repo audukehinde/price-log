@@ -22,7 +22,7 @@
 
       <div class="flex justify-center">
         <p
-          class="text-sm font-bold bg-white text-red-600 md:w-[70%] text-center"
+          class="text-sm font-semibold bg-white text-red-600 md:w-[70%] text-center rounded-md p-3"
           v-if="errors"
         >
           {{ errors }}
@@ -71,10 +71,10 @@ export default {
         });
         this.$router.push("/login");
         console.log(response);
-        this.error = response.data.message
-        setTimeout(() => {
-          this.error = true;
-        }, 2000);
+        this.errors = response.data.message
+        // setTimeout(() => {
+        //   this.errors = true;
+        // }, 2000);
 
       } catch (error) {
         this.errors =
@@ -83,7 +83,7 @@ export default {
             : error.response.data;
 
             setTimeout(() => {
-          console.log('Timer working');
+          // console.log('Timer working');
            this.errors = ''
             }, 3000);
       }
