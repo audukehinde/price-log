@@ -1,12 +1,16 @@
 <template>
-  <div class="flex flex-col-reverse lg:flex-row lg:w-screen lg:h-screen">
+<form @submit.prevent="handleSubmit">
+  <div class="flex flex-col-reverse lg:flex-row lg:w-screen">
+    
     <button
       type="submit"
       class="flex justify-center items-center bottom-0 lg:hidden lg:rounded-lg rounded text-sm font-semibold text-white w-32 h-8 bg-primary-color"
     >
       Done
     </button>
-    <div class="bg-sidebar h-[100vh] lg:w-1/2">
+    <!-- Input Field -->
+   
+    <div class="bg-sidebar  lg:w-1/2">
       <img src="../img/PriceLog.png" alt="" class="mt-2 mb-8 ml-20 w-32" />
       <div class="flex flex-col lg:hidden">
         <div class="flex justify-center">
@@ -25,39 +29,41 @@
           </label>
         </div>
       </div>
+       <!-- <div class="overflow-y-auto p-10"> -->
       <div class="flex flex-col items-center">
         <div class="flex flex-col">
+          
           <label>Title</label>
           <input
             type="text"
-            class="md:w-[100%] lg:w-[400px] lg:h-[35px] h-8 px-3 rounded-[5px] border-1 border-primary-color focus:outline-none"
+            class="md:w-[100%] lg:w-[400px] lg:h-[35px] h-8 px-3 rounded-[5px] border-1 border-primary-color focus:outline-none" v-model="title"
           />
         </div>
         <div class="flex flex-col m-1">
           <label>Manufacturer</label>
           <input
             type="text"
-            class="lg:w-[400px] lg:h-[35px] h-8 px-3 rounded-[5px] border-1 border-primary-color focus:outline-none"
+            class="lg:w-[400px] lg:h-[35px] h-8 px-3 rounded-[5px] border-1 border-primary-color focus:outline-none" v-model="manufacturer"
           />
         </div>
         <div class="flex flex-col m-1">
           <label>Model No.</label>
           <input
             type="text"
-            class="lg:w-[400px] lg:h-[35px] px-3 rounded-[5px] h-8 border-1 border-primary-color focus:outline-none"
+            class="lg:w-[400px] lg:h-[35px] px-3 rounded-[5px] h-8 border-1 border-primary-color focus:outline-none" v-model="modelNo"
           />
         </div>
         <div class="flex flex-col m-1">
           <label>Description</label>
           <input
             type="message"
-            class="lg:w-[400px] lg:h-24 px-2 h-16 rounded-[5px] border-1 border-primary-color focus:outline-none"
+            class="lg:w-[400px] lg:h-24 px-2 h-16 rounded-[5px] border-1 border-primary-color focus:outline-none" v-model="description"
           />
         </div>
         <div class="flex flex-col m-1">
           <label>Category</label>
           <select
-            v-model="selected"
+            v-model="selected" 
             id="quantity_disabled"
             class="px-4 lg:w-[400px] lg:h-[35px] h-8 rounded-[5px] border-primary-color focus:outline-none"
             @change="onItemSelected($event)"
@@ -85,8 +91,10 @@
             </div>
           </div>
         </div>
+      
       </div>
     </div>
+    
     <div
       class="w-1/2 p-10 lg:flex md:justify-center md:items-center flex-col hidden bg-sidebar"
     >
@@ -111,7 +119,10 @@
         Upload
       </button>
     </div>
+   
   </div>
+   </form>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -123,6 +134,12 @@ export default {
       isCategorySelected: false,
       propertiesCategories: [],
       categories: [],
+      title: "",
+      manufacturer: "",
+      modelNo: "",
+      description: "",
+      // category: ""
+      // category: "",
     };
   },
 
@@ -135,6 +152,7 @@ export default {
         );
         console.log(res.data);
         this.propertiesCategories = res.data;
+        console.log(this.propertiesCategories)
       } catch (error) {
         this.propertiesCategories = [];
         throw new Error(error);
@@ -144,7 +162,38 @@ export default {
       const res = await axios.get("categories");
       this.categories = res.data;
       console.log(res.data[0]);
-    }
+    }, 
+
+    async handleSubmit() {
+      console.log(this.title, this.manufacturer, this.description)
+       if (!this.title || !this.manufacturer || !this.modelNo || !this.description) {
+            alert("Fill the Required Fields");
+            return
+          }
+      try {
+        const response = await axios.post("items", {
+          title: this.title,
+          manufacturer: this.manufacturer,
+          modelNo: this.modelNo,
+          description:this.description,
+          category: this.category
+        });
+        // this.$router.push("/login");
+        alert("Are you sure?")
+        console.log(response);
+        this.errors = response.data.message
+      } catch (error) {
+        this.errors =
+          error.response && error.response.data.error
+            ? error.response.data.error
+            : error.response.data;
+
+          //   setTimeout(() => {
+          //  this.errors = ''
+          //   }, 3000);
+      }
+    },
+
   },
   created() {
     this.getCategories();

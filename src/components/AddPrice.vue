@@ -1,6 +1,6 @@
 <template>
   <div class="backdrop" @click.self="closeModal">
-    <div class="modal w-[350px] bg-[#D9E9F0]" :class="{ sale: theme === 'sale'}" >
+    <div class="modal w-[350px] bg-[#D9E9F0]" >
      <div class="actions">
        <slot></slot>
      </div>

@@ -1,5 +1,6 @@
 <template>
   <div class="md:flex justify-center hidden">
+     
     <div class="flex justify-center md:justify-between mt-8 w-[95%]">
       <div class="flex items-center gap-2">
         <span class="relative z-10 pl-2">
@@ -33,9 +34,9 @@
       </router-link>
     </div>
   </div>
-  <div class="overflow-y-auto h-[80vh] p-10">
+  <!-- <div class="overflow-y-auto h-[80vh] p-10"> -->
   <div
-    class="grid grid-cols-2 gap-6 place-content-center place-items-center md:mt-10 md:grid-cols-5 md:gap-4" 
+    class="grid grid-cols-2 gap-4 place-content-center place-items-center md:mt-5 md:grid-cols-5 md:gap-8" 
   >
     <div
       v-for="item in items"
@@ -67,31 +68,10 @@
       <p class="mt-4 pl-4">Wire</p>
       <p class="my-2 pl-4 text-3xl font-semibold text-gray-800">$90</p>
     </div>
-    <!--
-      <div class="w-[150px] md:w-[200px] shadow-md border-2 ">
-        <img src="https://res.cloudinary.com/dfaseubju/image/upload/v1658240853/Rectangle_29_wkfgi3.png" alt="Tool Name">
-        <p class="mt-4 pl-4">Car Battery</p>
-        <p class="my-2 pl-4 text-3xl font-semibold text-gray-800">$70</p>
-      </div>
-      <div class="w-[150px] md:w-[200px] shadow-md border-2 ">
-        <img src="https://res.cloudinary.com/dfaseubju/image/upload/v1658240853/Rectangle_30_zmiail.png" alt="Tool Name">
-        <p class="mt-4 pl-4">Limit Switch</p>
-        <p class="my-2 pl-4 text-3xl font-semibold text-gray-800">$30</p>
-      </div>
-      <div class="w-[150px] md:w-[200px] shadow-md border-2 ">
-        <img src="https://res.cloudinary.com/dfaseubju/image/upload/v1658240853/Rectangle_36_ltzbjo.png" alt="Tool Name">
-        <p class="mt-4 pl-4">Standing Fan</p>
-        <p class="my-2 pl-4 text-3xl font-semibold text-gray-800">$10</p>
-      </div>
-      <div class="w-[150px] md:w-[200px] shadow-md border-2">
-        <img src="https://res.cloudinary.com/dfaseubju/image/upload/v1658240853/Rectangle_35_gll32b.png" alt="Tool Name">
-        <p class="mt-4 pl-4">Plier</p>
-        <p class="my-2 pl-4 text-3xl font-semibold text-gray-800">$200</p>
-      </div> -->
 
     <router-view />
   </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -117,11 +97,6 @@ export default {
         err.value = error.res.data;
       }
     };
-
-    // const bookAppointment = (id) => {
-    //   console.log(id)
-    //   router.push(`/doctors/${id}`)
-    // }
 
      const fetchItem = async (id) => {
         const res = await axios.get(`items/${id}`);

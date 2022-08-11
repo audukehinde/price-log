@@ -8,6 +8,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* height: auto; */
 }
 </style>

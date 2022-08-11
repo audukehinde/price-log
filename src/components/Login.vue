@@ -65,8 +65,10 @@ export default {
         email: this.email,
         password: this.password
       });
+      // if()
+      console.log(response);
       this.$router.push("/main");
-      // console.log(response);
+      console.log(response);
       localStorage.setItem('token', response.data.data.token);
         
       } catch (error) {

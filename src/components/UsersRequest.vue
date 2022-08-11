@@ -1,6 +1,6 @@
 <template>
         
-    <div class=" flex justify-center items-center gap-2 flex-col w-[80vw]">
+    <div class=" flex justify-center relative items-center gap-2 flex-col w-[80vw]">
         <div class="flex px-8 items-center justify-center bg-sidebar w-[50vw]">
             <div class="w-full flex items-center text-[16px] h-5 drop-shadow-lg ">Wande has requested for authorisation</div>
             <div class="flex items-center gap-3">

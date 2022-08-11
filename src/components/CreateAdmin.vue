@@ -1,6 +1,6 @@
 <template>
-    <div class="">
-        <div class=" w-full h-[80vh] p-10 overflow-y-auto">
+    <div class="w-[80vw] flex justify-center overflow-hidden">
+        <div class="">
 
             <div class="mt-3 flex items-center justify-between bg-sidebar w-[70vw] px-4 py-2">
                 <div class="bg-[#F86D62] text-white w-[50px] h-[50px] rounded-[200px]">

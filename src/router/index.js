@@ -11,6 +11,7 @@ import ForgetPassword from "../views/ForgetPassword";
 import ResetPassword from "../views/ResetPassword";
 import UserHomePage from "../views/UserHomePage";
 import AddCategory from "../components/AddCategory.vue";
+import Nav from "../components/Nav.vue";
 
 const routes = [
   {
@@ -34,6 +35,7 @@ const routes = [
       { path: "/usersRequest", component: UsersRequest },
       { path: "/createAdmin", component: CreateAdmin },
       { path: "/addcategory", component: AddCategory },
+      { path: "/nav", component: Nav },
     ],
   },
 

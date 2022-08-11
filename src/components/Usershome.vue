@@ -30,7 +30,7 @@
       </div>
   </div>
   <div class="flex">
-    <sideBar />
+    <!-- <sideBar /> -->
     <!-- <div class="flex-1 p-5"><router-view /></div> -->
     <!-- <div class=""><item/></div> -->
   
