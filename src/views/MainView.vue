@@ -1,25 +1,53 @@
 <template>
-  <div class="bg-primary-color h-14 flex items-center">
-    <div class="">
-      <img src="https://res.cloudinary.com/dfaseubju/image/upload/v1658150866/Group_161_qkw2qi.png" alt="" class="pb-14 w-44">
-    </div>
-    <img 
-    />
-  </div>
-  <div class="flex">
-    <div><sideBar /></div>
-    <div class="ml-6"><item/></div>
+  <div class="flex overflow-y-hidden">
+      <div class="fixed z-10">
+        <sideBar />
+      </div>
+      <div class="ml-56">
+        <div class=" sticky">
+          <Nav />
+        </div>
+        <div class="flex-1 p-5"><router-view /></div>
+        
+      </div>
   </div>
 </template>
 
 <script>
 import sideBar from "@/components/sideBar.vue";
 import Item from '@/components/Item.vue';
+import Users from '@/components/Users.vue';
+import axios from 'axios';
+import Nav from '@/components/Nav.vue';
 
 export default {
   components: {
     sideBar,
     Item,
+    Users,
+    Nav,
+  },
+
+  data() {
+    return {
+      showSidebar: false,
+      user: null,
+    }
+  },
+
+   async created() {
+    // console.log(localStorage.getItem('token'));
+    const response = await axios.get('users/profile');
+    this.user = response.data;
+    // console.log(localStorage.getItem('token'));
+    // console.log(response.data);
+  },
+
+  methods: {
+     toggleSidebar() {
+      this.showSidebar = !this.showSidebar
+    },
+    
   }
 };
 </script>

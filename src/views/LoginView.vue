@@ -10,16 +10,16 @@
               >
                 Welcome
               </h1>
-              <p class="text-3xl md:text-start md:text-3xl md:leading-10">
+              <p class="text-[25px] md:text-start md:text-3xl md:leading-10 md:font-bold">
                 Login / Register to <br />start your Adventure
               </p>
             </div>
 
             <div
-              class="mt-6 md:flex md:justify-center md:items-center md:flex-col md:w-[30vw] md:bg-secondary md:rounded-[25px]"
+              class="mt-6 md:flex md:justify-center md:items-center md:flex-col md:w-[28vw] md:bg-secondary md:rounded-[25px]"
             >
               
-              <div class="flex mb-8 bg-white rounded-3xl border-0">
+              <div class="flex mb-8 bg-white rounded-3xl border-0 mx-[100px] md:mx-[10px]">
                 <button
                   @click="toggle"
                   class="bg-primary-color rounded-3xl px-6 py-1 signme font-bold"
@@ -41,6 +41,7 @@
         </div>
       </div>
     </div>
+    <div><router-view /></div>
   </div>
 </template>
 
