@@ -2,7 +2,7 @@
 <div>
       <div class="flex justify-center flex-col items-center">
 
-          <div class="flex justify-center border-2 border-gray-500 w-[80vw] my-5" >
+          <div class="flex justify-center my-border w-[80vw] my-5" >
             <div
                 class="w-[100%]"
               >
@@ -31,13 +31,16 @@
             </div>
           </div>
         <div class="flex w-[80vw] justify-between gap-10">
-          <div class=" bg-primary-color w-[45%] text-center text-white py-2 text-[25px] font-bold">Accept</div>
-          <div class="w-[45%] border-2 border-primary-color text-primary-color text-center py-2 text-[25px] font-bold">Decline</div>
+          <div class=" bg-primary-color w-[45%] text-center text-white py-2 text-[20px]">Accept</div>
+          <div class="w-[45%] my-border text-primary-color text-center py-2 text-[20px] ">Decline</div>
         </div>
     </div>
+
+    <p class="pl-[10%] mt-6 font-bold text-[25px]">REVIEW HISTORY</p>
+   
      <div class="w-[80vw] flex justify-center">
-        <p class="text-left">REVIEW HISTORY</p>
-      </div>
+        
+     </div>
   </div>
 </template>
 
@@ -48,5 +51,7 @@ export default {
 </script>
 
 <style>
-
+  .my-border {
+    border: 1px solid #016A9A;
+  }
 </style>
