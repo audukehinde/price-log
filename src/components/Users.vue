@@ -40,7 +40,7 @@
           </td>
 
           <td>
-            <div class="flex cursor-pointer">
+            <div class="flex justify-center cursor-pointer">
              <img src="@/assets/Vector.svg" alt="" class="p-4 w-12">
               <img src="@/assets/edit.svg" alt="" class="p-4 w-12">
             </div>
@@ -67,7 +67,7 @@ export default {
     const getUsers = async () => {
       try {
         const res = await axios.get("users");
-        users.value = res.data;
+        users.value = res.data.users;
         console.log(res.data);
       } catch (error) {
         err.value = error.res.data;

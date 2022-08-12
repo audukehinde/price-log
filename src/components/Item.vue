@@ -4,26 +4,12 @@
     <div class="flex justify-center md:justify-between mt-8 w-[95%]">
       <div class="flex items-center gap-2">
         <span class="relative z-10 pl-2">
-          <svg
-            width="17"
-            height="17"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.25 19.25L15.1378 15.1305M17.4167 9.62504C17.4167 11.6915 16.5958 13.6734 15.1345 15.1346C13.6733 16.5958 11.6915 17.4167 9.625 .4167C7.55852 17.4167 5.57668 16.5958 4.11546 15.1346C2.65424 13.6734 1.83334 11.6915 1.83334 9.62504C1.83334 7.55856 2.65424 5.57672 4.11546 4.1155C5.57668 2.65428 7.55852 1.83337 9.625 1.83337C11.6915 1.83337 13.6733 2.65428 15.1345 4.1155C16.5958 5.57672 17.4167 7.55856 17.4167 9.62504V9.62504Z"
-              stroke="black"
-              stroke-opacity="0.53"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" fill="rgba(149,164,166,1)" class="cursor-pointer"/></svg>
         </span>
         <input
           type="text"
           placeholder="Search"
-          class="w-32 md:absolute pl-7 py-1 rounded-[5px] shadow-md border-t-1 md:w-96 focus:outline-primary-color"
+          class="w-32 md:absolute pl-9 py-1 rounded-[5px] shadow-md border-t-1 md:w-96 focus:outline-primary-color"
         />
       </div>
       <router-link
@@ -78,6 +64,7 @@
 import axios from "axios";
 import { ref } from "@vue/reactivity";
 import { useRouter } from "vue-router";
+
 export default {
   name: "Item",
 

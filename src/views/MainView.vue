@@ -36,11 +36,11 @@ export default {
   },
 
    async created() {
-    console.log(localStorage.getItem('token'));
+    // console.log(localStorage.getItem('token'));
     const response = await axios.get('users/profile');
     this.user = response.data;
     // console.log(localStorage.getItem('token'));
-    console.log(response.data);
+    // console.log(response.data);
   },
 
   methods: {

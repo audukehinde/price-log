@@ -11,7 +11,7 @@
         
       /> -->
       
-        <div class=" bg-primary-color text-white mt-16 flex items-center justify-start pl-3"><img src="@/assets/items.png" alt="" class="p-4 w-12">ITEMS</div>
+        <div class="box bg-primary-color text-white mt-16 flex items-center justify-start pl-3"><img src="@/assets/items.png" alt="" class="p-4 w-12">ITEMS</div>
       </router-link>
     </div>
 
@@ -19,20 +19,20 @@
     <div class="">
 
       <!-- <form action=""> -->
-      <router-link to="/users">
-       <div class=" bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/users.svg" alt="" class="p-4 w-12">ALL USERS</div>
+      <router-link to="/users" class="nav-link">
+       <div class="box bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/users.svg" alt="" class="p-4 w-12">ALL USERS</div>
       </router-link>
 
-      <router-link to="UsersRequest">
-      <div class=" bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/userRequest1.svg" alt="" class="p-4 w-12">USER REQUEST</div>
+      <router-link to="UsersRequest" class="nav-link">
+      <div class="box bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/userRequest1.svg" alt="" class="p-4 w-12">USER REQUEST</div>
       </router-link>
 
-      <router-link to="/createAdmin">
-      <div class="bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/Verified.svg" alt="" class="p-4 w-12">PRICE VERIFICATION</div>
+      <router-link to="/priceverification.vue" class="nav-link">
+      <div class="box bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/Verified.svg" alt="" class="p-4 w-12">PRICE VERIFICATION</div>
       </router-link>
 
-      <router-link to="/AddCategory">
-      <div class=" bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/Rectangle.svg" alt="" class="p-4 w-12">ADD CATEGORY</div>
+      <router-link to="/AddCategory" class="nav-link">
+      <div class="box bg-primary-color text-white mt-5 text-sm flex items-center justify-start pl-3"><img src="@/assets/Rectangle.svg" alt="" class="p-4 w-12">ADD CATEGORY</div>
       </router-link>
       <!-- </form> -->
     </div>
@@ -99,5 +99,11 @@ export default {
 
   .closeSidebar {
     display: none;
+  }
+
+  a.router-link-active {
+    background: #bbb;
+    color: #016A9A;
+    font-weight: bold;
   }
 </style>

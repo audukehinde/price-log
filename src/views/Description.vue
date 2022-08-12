@@ -40,13 +40,13 @@
           <td class="py-1">{{ price.quantity}}</td>
         </tr>
       </table>
-      <div class="flex justify-start">
-        <button
-          class="bg-primary-color text-white text-sm font-bold w-28 my-2 py-2 drop-shadow-lg rounded-lg hover:bg-transparent hover:text-black accept"
+      <!-- <div class="flex justify-end"> -->
+        <div
+          class="text-primary-color text-sm font-bold w-[100%] my-2 py-2 px-10 hover:text-black text-right"
         >
           See More...
-        </button> 
-      </div>
+        </div> 
+      <!-- </div> -->
     </div>
 
     <div class="flex justify-center myfont">
