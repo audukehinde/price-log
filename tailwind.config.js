@@ -13,6 +13,7 @@ module.exports = {
         "sidebar": "rgba(1, 106, 154, 0.18)",
         "sidebar-secondary": "rgba(244, 248, 248, 0.3)",
         "sidebar-tags": "rgba(0, 0, 0, 0.7)",
+        "innerbg": "rgba(1, 106, 154, 0.1)",
       },
       fontFamily: {
         'sans': ['ui-sans-serif', 'system-ui'],

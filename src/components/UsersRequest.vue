@@ -61,7 +61,9 @@ export default {
         users.value = res.data.users;
         console.log(res.data.users);
       } catch (error) {
-        err.value = error.res.data;
+        err.value = error.response && error.response.data.error
+            ? error.response.data.error
+            : error.response.data;;
       }
     };
 
