@@ -68,7 +68,9 @@ const routes = [
     component: UserHomePage,
   },
   
-  { path: "/pricereview", component: PriceReview },
+  { path: "/pricereview", 
+    component: PriceReview,
+  },
 ];
 
 const router = createRouter({
