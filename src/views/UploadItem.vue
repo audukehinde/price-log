@@ -196,10 +196,6 @@ export default {
           error.response && error.response.data.error
             ? error.response.data.error
             : error.response.data;
-
-          //   setTimeout(() => {
-          //  this.errors = ''
-          //   }, 3000);
       }
     },
 

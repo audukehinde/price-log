@@ -61,23 +61,25 @@ export default {
    methods: {
     async handleSubmit() {
       try {
-           const response = await axios.post('users/login', {
+        const response = await axios.post('users/login', {
         email: this.email,
         password: this.password
       });
-      // if()
-      console.log(response);
-      this.$router.push("/main");
+      console.log(response.data.data);
+      if(response.data.data.isAdmin){
+        this.$router.push("/main");
+      }else {
+        this.$router.push("/userhomepage");
+      }
       console.log(response);
       localStorage.setItem('token', response.data.data.token);
         
       } catch (error) {
 
          this.errors = error.response && error.response.data.error
-                      ? error.response.data.error.message
-                      : error.response.data.message;
+            ? error.response.data.error.message
+            : error.response.data.message;
         setTimeout(() => {
-          // console.log('Timer working');
            this.errors = ''
             }, 3000);    
       }

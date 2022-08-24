@@ -11,6 +11,7 @@ import ForgetPassword from "../views/ForgetPassword";
 import ResetPassword from "../views/ResetPassword";
 import UserHomePage from "../views/UserHomePage";
 import AddCategory from "../components/AddCategory.vue";
+import PriceReview from "../components/PriceReview.vue";
 import Nav from "../components/Nav.vue";
 
 const routes = [
@@ -36,6 +37,7 @@ const routes = [
       { path: "/priceverification.vue", component: PriceVerification },
       { path: "/addcategory", component: AddCategory },
       { path: "/nav", component: Nav },
+      
     ],
   },
 
@@ -64,6 +66,10 @@ const routes = [
   {
     path: "/userhomepage",
     component: UserHomePage,
+  },
+  
+  { path: "/pricereview", 
+    component: PriceReview,
   },
 ];
 
